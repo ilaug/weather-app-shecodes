@@ -1,0 +1,72 @@
+.container {
+  border: 8px solid #155263;
+  width: 70%;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px auto;
+  display: 0 block;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffff;
+  max-width: 700px;
+  min-width: 550px;
+}
+.search-bar {
+  margin: 0 auto;
+  display: 0 block;
+  text-align: center;
+}
+.current-location {
+  font-size: 30px;
+  padding: 10px;
+  position: relative;
+  top: -7px;
+  left: -10px;
+  color: #155263;
+}
+.mainDay {
+  margin: 10px;
+}
+.main-weather-icon {
+  font-size: 250px;
+  color: #ff9a3c;
+}
+.lastUpdated {
+  font-size: 8px;
+}
+.fiveDayForcast {
+  margin: 40px;
+}
+.sun-icon {
+  color: #ff9a3c;
+}
+.rain-icon {
+  color: #007cb9;
+}
+.sun-rain-icon {
+  color: #606470;
+}
+.sun-cloud-icon {
+  color: #ffc93c;
+}
+body {
+  background-color: #bbe9db;
+}
+form {
+  padding: 25px;
+  margin: 0 auto;
+}
+h1 {
+  color: #155263;
+  border: 2px solid #d9dad7;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 20px;
+  padding: 10px;
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #155263;
+}
