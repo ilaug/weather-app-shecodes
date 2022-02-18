@@ -49,6 +49,11 @@
 .sun-cloud-icon {
   color: #ffc93c;
 }
+.sign-off {
+  color: #155263;
+  font-size: 12px;
+  text-align: center;
+}
 body {
   background-color: #bbe9db;
 }
