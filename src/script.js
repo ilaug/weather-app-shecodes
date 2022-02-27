@@ -31,6 +31,8 @@ event.preventDefault();
   let changedCity = response.data.name;
   h1.innerHTML = `${changedCity}`;
 
+  celsiusTemperature = response.data.main.temp;
+
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}`;
@@ -73,3 +75,27 @@ function locationClick(event) {
 
 let locationButton = document.querySelector("#find-current-location");
 locationButton.addEventListener("click", locationClick);
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let currentTemperature = document.querySelector('#current-temperature');
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector('#fahrenheit-link');
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+    celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let currentTemperature = document.querySelector('#current-temperature');
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusLink = document.querySelector('#celsius-link');
+celsiusLink.addEventListener("click", showCelsiusTemperature);

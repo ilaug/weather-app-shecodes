@@ -76,6 +76,16 @@ h2 {
 }
 .units {
   font-size: 20px;
+  color: black;
+}
+.units .active {
+  font-size: 24px;
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.units .active:hover {
+  text-decoration: none;
 }
 #current-temperature {
   font-size: 18px;
