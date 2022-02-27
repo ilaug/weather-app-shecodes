@@ -10,13 +10,14 @@ h1 {
   border: 2px solid #d9dad7;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   margin: 5px;
   padding: 10px;
 }
 h2 {
   text-align: center;
   font-weight: bold;
+  font-size: 24px;
   color: #155263;
 }
 .container {
@@ -75,12 +76,12 @@ h2 {
   text-align: center;
 }
 .units {
-  font-size: 20px;
-  color: black;
+  font-size: 18px;
+  color: #155263;
 }
 .units .active {
   font-size: 24px;
-  color: black;
+  color: #155263;
   cursor: default;
   text-decoration: none;
 }
@@ -88,5 +89,5 @@ h2 {
   text-decoration: none;
 }
 #current-temperature {
-  font-size: 18px;
+  font-size: 24px;
 }
