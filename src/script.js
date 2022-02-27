@@ -46,6 +46,11 @@ event.preventDefault();
   let humidity = response.data.main.humidity;
   let currenthumidity = document.querySelector("#current-humidity");
   currenthumidity.innerHTML = `Humidity: ${humidity}%`;
+
+  
+  let weatherIcon = document.querySelector("#main-weather-icon");
+  weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 let form = document.querySelector("#search-form");
