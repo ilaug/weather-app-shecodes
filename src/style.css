@@ -10,8 +10,8 @@ h1 {
   border: 2px solid #d9dad7;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 30px;
-  margin: 20px;
+  font-size: 20px;
+  margin: 5px;
   padding: 10px;
 }
 h2 {
@@ -29,7 +29,7 @@ h2 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   background-color: #ffff;
-  max-width: 700px;
+  max-width: 600px;
   min-width: 425px;
 }
 .search-bar {
@@ -80,5 +80,5 @@ h2 {
   font-size: 20px;
 }
 #current-temperature {
-  font-size: 20px;
+  font-size: 18px;
 }
