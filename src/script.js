@@ -13,6 +13,38 @@ let day = days[now.getDay()];
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function displayFiveDayForcast() {
+  let forcastElement = document.querySelector("#forcast");
+    let fiveDayForcastDays = ["Mon", "Tues", "Weds"];
+    let forcastHTML = `<div class="row">`;
+
+  fiveDayForcastDays.forEach(function (day) {
+
+  forcastHTML = 
+  forcastHTML + `
+    <div class="col-2">
+            <div class="fiveDayForcast-day"> ${day} </div>
+            
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class=fiveDayForcast-temperatures>
+        <span class="fiveDayForcast-temp-max">24</span>
+        <span class="fiveDayForcast-temp-min"> 16</span>
+        </div>
+        </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+displayFiveDayForcast();
+
+
+
+
 
 
 function searchCity(event) {
@@ -99,3 +131,4 @@ function showCelsiusTemperature(event) {
 }
 let celsiusLink = document.querySelector('#celsius-link');
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+}
