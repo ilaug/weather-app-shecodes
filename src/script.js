@@ -21,7 +21,6 @@ function formatForecastDays(timestamp) {
 }
 
 function displayFiveDayForecast(response) {
-
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   
@@ -49,9 +48,6 @@ if (index <5) {
   forecastElement.innerHTML = forecastHTML;
 
 }
-
-
-
 function searchCity(response) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let cityInput = response;
@@ -59,7 +55,7 @@ function searchCity(response) {
   axios.get(apiUrl).then(showCurrentWeather);
 }
 
-function handleSubmit(event) {
+function citySubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-input");
   searchCity(cityInput.value);
@@ -72,6 +68,7 @@ function getForecast(coordinates) {
 }
 
 function showCurrentWeather(response) {
+  event.preventDefault();
   let h1 = document.querySelector("h1");
   let changedCity = response.data.name;
   h1.innerHTML = `${changedCity}`;
@@ -102,7 +99,7 @@ getForecast(response.data.coord);
 }
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", citySubmit);
 
 function currentLocation(position) {
   let lat = position.coords.latitude;
