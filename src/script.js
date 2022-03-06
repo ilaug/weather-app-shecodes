@@ -50,8 +50,8 @@ if (index <5) {
 
 }
 
-function searchCity(event) {
-  event.preventDefault();
+function searchCity(response) {
+
   let cityInput = document.querySelector("#input-search").value;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${cityInput}`;
@@ -68,7 +68,6 @@ function getForecast(coordinates) {
 }
 
 function showCurrentWeather(response) {
-event.preventDefault();
   let h1 = document.querySelector("h1");
   let changedCity = response.data.name;
   h1.innerHTML = `${changedCity}`;
@@ -112,7 +111,6 @@ function currentLocation(position) {
 
 function locationClick(event) {
   event.preventDefault();
-  console.log(event);
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
 
@@ -143,3 +141,4 @@ function showCelsiusTemperature(event) {
 let celsiusLink = document.querySelector('#celsius-link');
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
+let h1= "London";
