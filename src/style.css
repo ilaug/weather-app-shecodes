@@ -49,14 +49,13 @@ h2 {
 .mainDay {
   margin: 10px;
 }
-.main-weather-icon {
-}
 .lastUpdated {
   font-size: 8px;
 }
 .fiveDayForcast {
-  margin: 40px;
+  margin: 20px;
   font-size: 15px;
+  text-align: center;
 }
 .sun-icon {
   color: #ff9a3c;
