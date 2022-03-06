@@ -15,10 +15,11 @@ currentTime.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function displayFiveDayForcast() {
   let forcastElement = document.querySelector("#forcast");
-    let fiveDayForcastDays = ["Mon", "Tues", "Weds"];
-    let forcastHTML = `<div class="row">`;
+     let forcastHTML = `<div class="row">`;
+     let days = ["Mon", "Tues", "Weds"];
+   
 
-  fiveDayForcastDays.forEach(function (day) {
+ days.forEach(function (day) {
 
   forcastHTML = 
   forcastHTML + `
