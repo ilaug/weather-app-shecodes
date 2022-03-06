@@ -53,9 +53,11 @@ h2 {
   font-size: 8px;
 }
 .fiveDayForecast {
-  margin: 20px;
+  margin: 20px auto;
+  display: block;
   font-size: 15px;
   text-align: center;
+  color: #155263;
 }
 .sign-off {
   color: #155263;
@@ -77,4 +79,9 @@ h2 {
 }
 #current-temperature {
   font-size: 24px;
+}
+#main-weather-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
