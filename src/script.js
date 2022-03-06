@@ -37,7 +37,7 @@ if (index <5) {
           width="42"
         />
         <div class=fiveDayForecast-temperatures>
-        <span class="fiveDayForecast-temp-max"> ${Math.round(forecastDay.temp.max)}°C</span>
+        <span class="fiveDayForecast-temp-max"> <strong>${Math.round(forecastDay.temp.max)}°C</strong></span>
         <span class="fiveDayForecast-temp-min">${Math.round(forecastDay.temp.min)}°C</span>
         </div>
         </div>
