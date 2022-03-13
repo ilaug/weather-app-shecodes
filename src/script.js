@@ -21,7 +21,6 @@ function formatForecastDays(timestamp) {
 }
 
 function displayFiveDayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   
@@ -68,10 +67,11 @@ function getForecast(coordinates) {
 }
 
 function showCurrentWeather(response) {
-  event.preventDefault();
   let h1 = document.querySelector("h1");
   let changedCity = response.data.name;
   h1.innerHTML = `${changedCity}`;
+
+  celsiusLink.classList.add("active");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -134,7 +134,7 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
-    celsiusLink.classList.add("active");
+  celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let currentTemperature = document.querySelector('#current-temperature');
   currentTemperature.innerHTML = Math.round(celsiusTemperature);
