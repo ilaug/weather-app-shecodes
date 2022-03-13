@@ -96,6 +96,10 @@ function showCurrentWeather(response) {
   weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 getForecast(response.data.coord);
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
 }
 
 let form = document.querySelector("#search-form");
